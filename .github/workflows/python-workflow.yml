@@ -8,15 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v4
     - name: Set up Python 3.11
       uses: actions/setup-python@v5
       with:
         python-version: 3.11
-
-    - name: Checkout Repo
-      uses: actions/checkout@v4
-    - name: List and read files
-      run: cat requirements.txt
 
     - name: Install dependencies
       run: |
